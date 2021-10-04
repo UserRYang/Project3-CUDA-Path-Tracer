@@ -434,9 +434,6 @@ void pathtrace(uchar4 *pbo, int frame, int iter) {
         checkCUDAError("shadeMaterialCore failed!");
         depth++;
 
-       /* if (depth > traceDepth) {
-            iterationComplete = true; 
-        }*/
         iterationComplete = depth > traceDepth; // TODO: should be based off stream compaction results.
     }
 
